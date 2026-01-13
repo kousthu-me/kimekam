@@ -1,0 +1,122 @@
+:root {
+  --cream: #FFF6E8;
+  --nude: #F3E9E6;
+  --yellow: #F4F14A;
+  --saffron: #F39A22;
+  --orange: #D95A2B;
+  --red: #A61D1D;
+  --text-dark: #2F2F2F;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background: var(--cream);
+}
+
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:white;
+  font-weight:500;
+}
+.navbar a {
+  text-decoration:none;
+  color: var(--red);
+  margin-left:20px;
+}
+
+/* HERO */
+.hero {
+  height:70vh;
+  background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),
+              url('https://images.unsplash.com/photo-1584864263604-0c6a05c9774d') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size:3rem;
+  color: var(--saffron);
+}
+.hero span { color: var(--orange); }
+
+/* GRID SECTION */
+.grid-section { padding:60px 40px; }
+.grid-section h2 {
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:40px;
+}
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+.card {
+  text-align:center;
+  padding:25px;
+  background:var(--nude);
+  border-radius:12px;
+  text-decoration:none;
+  color:inherit;
+  transition: transform .3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+/* product color blocks */
+.card-img {
+  height:160px;
+  border-radius:12px;
+  background:var(--saffron);
+  margin-bottom:15px;
+}
+.card-img.serum { background:linear-gradient(135deg,var(--yellow),var(--orange)); }
+.card-img.cream { background:linear-gradient(135deg,var(--saffron),var(--orange)); }
+
+/* PAGE FORM */
+.contact-section {
+  padding:60px 40px;
+}
+.contact-section form {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:400px;
+  margin:auto;
+}
+.contact-section input,
+.contact-section textarea {
+  padding:12px;
+  border:1px solid var(--orange);
+}
+.contact-section button {
+  background:var(--saffron);
+  padding:12px;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* TITLE */
+.page-title {
+  padding:60px 40px;
+  text-align:center;
+  font-size:2.4rem;
+  color: var(--orange);
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  background:var(--nude);
+}
